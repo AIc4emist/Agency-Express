@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Agency Document</title>
-<style>
-html, body {
-  margin:0;
-  height:100%;
-}
-iframe {
-  width:100%;
-  height:100%;
-  border:none;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agency Document</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .viewer {
+      width: 100vw;
+      height: 100vh;
+      border: 0;
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      .viewer {
+        height: 100vh;
+      }
+    }
+
+    @media (max-width: 800px) {
+      body {
+        zoom: 0.9;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        zoom: 0.8;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<iframe src="Agency Express Shopper Guide.pdf"></iframe>
-
+  <iframe
+    class="viewer"
+    src="Agency Express Shopper Guide.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH">
+  </iframe>
 </body>
 </html>
